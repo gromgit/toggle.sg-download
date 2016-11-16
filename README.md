@@ -25,17 +25,19 @@ On Windows, if you installed Python from the official binaries, you should alrea
 
 `download_toggle_video2.py http://video.toggle.sg/blah http://video.toggle.sg/blerk ...`
 
+Debug mode can be enabled with the ```-d``` parameter like so:
+
+`./download_toggle_video2.py -d http://video.toggle.sg/blah`
+
 Tested with:
 - Python v2.7.6 on Windows 7 x64
 - Python v2.7.11 on Windows 7 x64
+- Python v2.7.11 on Windows 10 10586.104 x64
+- Python v2.7.12 on Xubuntu 16.04 x64
 
 # Configuration Options
 
 The following configuration options are directly editable in the script file:
-## DEBUG
-Default: 0 (disable debug mode)
-
-Set to 1 for verbose output to console, as well as write intermediate output to text files.
 ## AUTO_DOWNLOAD
 Default: 0 (do not auto-download)
 
@@ -55,7 +57,7 @@ Specifies the download file format preference, in order.
 
 # ffmpeg Dependency Notes
 ## Windows
-ffmpeg.exe must be located in the same folder as the python script. Script has been tested against ffmpeg.exe in http://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20150418-git-edbb9b5-win64-static.7z. Recent builds in Windows x64 can be found in http://ffmpeg.zeranoe.com/builds/win64/static/
+ffmpeg.exe must be located in the same folder as the python script. Script has been tested against ffmpeg.exe in https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20150418-git-edbb9b5-win64-static.7z. Recent builds in Windows x64 can be found in https://ffmpeg.zeranoe.com/builds/win64/static/
 
 ## Linux
 On Ubuntu 12.04, the version of libav-tools in the repo is not updated for m3u8; hence, you'll need to build ffmpeg from source from git://source.ffmpeg.org/ffmpeg.git
